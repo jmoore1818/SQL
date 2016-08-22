@@ -1,0 +1,54 @@
+SELECT `teacher`.`teacherId`,
+    `teacher`.`lastName`,
+    `teacher`.`firstName`,
+    `teacher`.`age`,
+    `teacher`.`salary`
+FROM `sql`.`teacher`;
+
+
+
+SELECT `class`.`classId`,
+    `class`.`name`,
+    `class`.`description`,
+    `class`.`teacherId`
+FROM `sql`.`class`;
+
+
+
+SELECT `student`.`studentId`,
+    `student`.`firstName`,
+    `student`.`lastName`,
+    `student`.`grade`,
+    `student`.`gpa`
+FROM `sql`.`student`;
+
+
+SELECT `class`.`classId`,
+    `class`.`name`,
+    `class`.`description`,
+    `class`.`teacherId`
+FROM `sql`.`class`
+WHERE `teacherId` = 13;
+
+
+SELECT `classstudent`.`classStudentId`,
+    `classstudent`.`classId`,
+    `classstudent`.`studentId`
+FROM `sql`.`classstudent`
+WHERE `classId` = 1;
+
+
+SELECT `classstudent`.`classStudentId`,
+    `classstudent`.`classId`,
+    `classstudent`.`studentId`
+FROM `sql`.`classstudent`
+WHERE `studentId` = 1;
+
+
+SELECT `student`.`studentId`,
+    `student`.`firstName`,
+    `student`.`lastName`,
+    `student`.`grade`,
+    `student`.`gpa`
+FROM `sql`.`student`
+WHERE `firstName` LIKE 'A%';
